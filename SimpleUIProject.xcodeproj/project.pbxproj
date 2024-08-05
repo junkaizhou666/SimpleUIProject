@@ -17,6 +17,7 @@
 		5A641BAB2C5C822500C8CE05 /* SimpleUIProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A641BAA2C5C822500C8CE05 /* SimpleUIProjectTests.m */; };
 		5A641BB52C5C822500C8CE05 /* SimpleUIProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A641BB42C5C822500C8CE05 /* SimpleUIProjectUITests.m */; };
 		5A641BB72C5C822500C8CE05 /* SimpleUIProjectUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A641BB62C5C822500C8CE05 /* SimpleUIProjectUITestsLaunchTests.m */; };
+		5A641C112C5CEACC00C8CE05 /* RefuseOfferViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A641C102C5CEACC00C8CE05 /* RefuseOfferViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		5A641BB02C5C822500C8CE05 /* SimpleUIProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleUIProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A641BB42C5C822500C8CE05 /* SimpleUIProjectUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleUIProjectUITests.m; sourceTree = "<group>"; };
 		5A641BB62C5C822500C8CE05 /* SimpleUIProjectUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleUIProjectUITestsLaunchTests.m; sourceTree = "<group>"; };
+		5A641C0F2C5CEACC00C8CE05 /* RefuseOfferViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RefuseOfferViewController.h; sourceTree = "<group>"; };
+		5A641C102C5CEACC00C8CE05 /* RefuseOfferViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RefuseOfferViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				5A641B922C5C822400C8CE05 /* SceneDelegate.m */,
 				5A641B942C5C822400C8CE05 /* ViewController.h */,
 				5A641B952C5C822400C8CE05 /* ViewController.m */,
+				5A641C0F2C5CEACC00C8CE05 /* RefuseOfferViewController.h */,
+				5A641C102C5CEACC00C8CE05 /* RefuseOfferViewController.m */,
 				5A641B972C5C822400C8CE05 /* Main.storyboard */,
 				5A641B9A2C5C822500C8CE05 /* Assets.xcassets */,
 				5A641B9C2C5C822500C8CE05 /* LaunchScreen.storyboard */,
@@ -270,6 +275,7 @@
 				5A641B902C5C822400C8CE05 /* AppDelegate.m in Sources */,
 				5A641BA12C5C822500C8CE05 /* main.m in Sources */,
 				5A641B932C5C822400C8CE05 /* SceneDelegate.m in Sources */,
+				5A641C112C5CEACC00C8CE05 /* RefuseOfferViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
