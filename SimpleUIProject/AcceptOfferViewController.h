@@ -6,6 +6,8 @@
 
 // 标题标签
 @property (nonatomic, strong) UILabel *titleLabel;
+// 预览按钮
+@property (nonatomic, strong) UIButton *previewButton;
 // 提交按钮
 @property (nonatomic, strong) UIButton *submitButton;
 // 滚动视图

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A6386112C61CAD500990A51 /* PreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6386102C61CAD500990A51 /* PreviewViewController.m */; };
 		5A641B902C5C822400C8CE05 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A641B8F2C5C822400C8CE05 /* AppDelegate.m */; };
 		5A641B932C5C822400C8CE05 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A641B922C5C822400C8CE05 /* SceneDelegate.m */; };
 		5A641B962C5C822400C8CE05 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A641B952C5C822400C8CE05 /* ViewController.m */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5A63860F2C61CAD500990A51 /* PreviewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PreviewViewController.h; sourceTree = "<group>"; };
+		5A6386102C61CAD500990A51 /* PreviewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PreviewViewController.m; sourceTree = "<group>"; };
 		5A641B8B2C5C822400C8CE05 /* SimpleUIProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleUIProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A641B8E2C5C822400C8CE05 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5A641B8F2C5C822400C8CE05 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -125,6 +128,8 @@
 				5A641BA02C5C822500C8CE05 /* main.m */,
 				5A6D916C2C6062CF0073A092 /* AcceptOfferViewController.h */,
 				5A6D916D2C6062CF0073A092 /* AcceptOfferViewController.m */,
+				5A63860F2C61CAD500990A51 /* PreviewViewController.h */,
+				5A6386102C61CAD500990A51 /* PreviewViewController.m */,
 			);
 			path = SimpleUIProject;
 			sourceTree = "<group>";
@@ -280,6 +285,7 @@
 				5A641B902C5C822400C8CE05 /* AppDelegate.m in Sources */,
 				5A641BA12C5C822500C8CE05 /* main.m in Sources */,
 				5A641B932C5C822400C8CE05 /* SceneDelegate.m in Sources */,
+				5A6386112C61CAD500990A51 /* PreviewViewController.m in Sources */,
 				5A641C112C5CEACC00C8CE05 /* RefuseOfferViewController.m in Sources */,
 				5A6D916E2C6062CF0073A092 /* AcceptOfferViewController.m in Sources */,
 			);

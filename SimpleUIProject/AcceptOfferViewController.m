@@ -1,4 +1,5 @@
 #import "AcceptOfferViewController.h"
+#import "PreviewViewController.h"
 
 @implementation AcceptOfferViewController
 
@@ -25,10 +26,11 @@
     [self setupEmergencyContactSection];
     [self setupEducationBackgroundSection];
     [self setupWorkExperienceSection];
+    [self setupPreviewButton];
     [self setupSubmitButton];
     
     // 设置 scrollView 的 contentSize
-    self.scrollView.contentSize = CGSizeMake(self.view.bounds.size.width, CGRectGetMaxY(self.submitButton.frame) + 20);
+    self.scrollView.contentSize = CGSizeMake(self.view.bounds.size.width, CGRectGetMaxY(self.submitButton.frame) + 50);
 }
 
 // 设置 scrollView 方法
@@ -190,10 +192,25 @@
     [self.scrollView addSubview:workExperienceLabel];
 }
 
+- (void)setupPreviewButton {
+    // 设置预览按钮的位置在提交按钮的上方
+    CGFloat y = CGRectGetMaxY(self.jobDescriptionField.frame) + 15;
+    self.previewButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    self.previewButton.frame = CGRectMake(15, y, self.view.bounds.size.width - 30, 50);
+    [self.previewButton setTitle:@"预览" forState:UIControlStateNormal];
+    self.previewButton.titleLabel.font = [UIFont boldSystemFontOfSize:20];
+    self.previewButton.backgroundColor = [UIColor systemBlueColor];
+    [self.previewButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    self.previewButton.layer.cornerRadius = 10;
+    [self.previewButton addTarget:self action:@selector(previewButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    NSLog(@"Preview Button Frame: %@", NSStringFromCGRect(self.previewButton.frame));
+    [self.scrollView addSubview:self.previewButton];
+}
+
 // 设置提交按钮的方法
 - (void)setupSubmitButton {
-    CGFloat y = CGRectGetMaxY(self.jobDescriptionField.frame) + 15;
-    
+    // 设置提交按钮的位置在预览按钮的下方
+    CGFloat y = CGRectGetMaxY(self.previewButton.frame) + 15;
     self.submitButton = [UIButton buttonWithType:UIButtonTypeSystem];
     self.submitButton.frame = CGRectMake(15, y, self.view.bounds.size.width - 30, 50);
     [self.submitButton setTitle:@"提交" forState:UIControlStateNormal];
@@ -202,8 +219,10 @@
     [self.submitButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     self.submitButton.layer.cornerRadius = 10;
     [self.submitButton addTarget:self action:@selector(submitButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    NSLog(@"Submit Button Frame: %@", NSStringFromCGRect(self.submitButton.frame));
     [self.scrollView addSubview:self.submitButton];
 }
+
 
 // 创建标签的方法
 - (UILabel *)createSectionLabelWithTitle:(NSString *)title yPosition:(CGFloat)y {
@@ -234,6 +253,38 @@
     [button addTarget:self action:@selector(uploadButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self.scrollView addSubview:button];
     return button;
+}
+
+//预览按钮点击事件处理方法
+- (void)previewButtonTapped:(UIButton *)sender {
+    // 收集表单数据
+    NSMutableDictionary *formData = [NSMutableDictionary dictionary];
+    [formData setObject:self.nameField.text ?: @"" forKey:@"姓名"];
+    [formData setObject:self.genderField.text ?: @"" forKey:@"性别"];
+    [formData setObject:self.dobField.text ?: @"" forKey:@"出生日期"];
+    [formData setObject:self.phoneField.text ?: @"" forKey:@"联系电话"];
+    [formData setObject:self.emailField.text ?: @"" forKey:@"电子邮件地址"];
+    [formData setObject:self.currentAddressField.text ?: @"" forKey:@"现居住地址"];
+    [formData setObject:self.homeAddressField.text ?: @"" forKey:@"户籍地址"];
+    [formData setObject:self.emergencyContactNameField.text ?: @"" forKey:@"紧急联系人姓名"];
+    [formData setObject:self.emergencyContactRelationField.text ?: @"" forKey:@"紧急联系人关系"];
+    [formData setObject:self.emergencyContactPhoneField.text ?: @"" forKey:@"紧急联系人电话"];
+    [formData setObject:self.schoolNameField.text ?: @"" forKey:@"学校名称"];
+    [formData setObject:self.majorField.text ?: @"" forKey:@"专业"];
+    [formData setObject:self.degreeField.text ?: @"" forKey:@"学历"];
+    [formData setObject:self.graduationDateField.text ?: @"" forKey:@"毕业时间"];
+    [formData setObject:self.companyNameField.text ?: @"" forKey:@"公司名称"];
+    [formData setObject:self.positionField.text ?: @"" forKey:@"职位"];
+    [formData setObject:self.workDurationField.text ?: @"" forKey:@"工作时间"];
+    [formData setObject:self.jobDescriptionField.text ?: @"" forKey:@"主要职责"];
+    
+    // 初始化 PreviewViewController 并传递数据
+    PreviewViewController *previewVC = [[PreviewViewController alloc] init];
+    previewVC.formData = formData;
+    
+    // 显示 PreviewViewController
+    [self presentViewController:previewVC animated:YES completion:nil];
+    return;
 }
 
 // 提交按钮点击事件处理方法
@@ -308,5 +359,6 @@
     documentPicker.delegate = self;
     [self presentViewController:documentPicker animated:YES completion:nil];
 }
+
 
 @end
