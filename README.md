@@ -1,30 +1,16 @@
-# SimpleUIProject
+iOS Offer管理应用
 
-## 项目描述
+这个项目是一个iOS应用程序，旨在管理工作录用通知。它为用户提供了接受或拒绝工作录用通知以及预览录用通知详情的功能。该应用使用Objective-C开发，并利用了多种iOS框架和设计模式。
 
-SimpleUIProject 是一个使用 Objective-C 开发的 iOS 应用程序，展示了如何使用 UIKit 创建和布局 UI 元素。该应用程序主要包含两个视图控制器：ViewController 和 RefuseOfferViewController，分别展示了录用通知书和拒绝录用通知书的界面。
+功能特性
 
-## 功能
+接受Offer：用户可以接受工作录用通知并跳转到新页面填写入职资料。
+拒绝Offer：用户可以拒绝工作录用通知。
+预览Offer：用户可以预览工作录用通知的详细信息。
+使用技术
 
-在 `ViewController` 中：
-- 显示公司名称标签。
-- 显示录用通知书标签。
-- 显示公司 logo 图片。
-- 显示带有多种样式的文本，包括特定文本的颜色、字体大小和行距调整。
+Objective-C：主要的编程语言。
+UIKit：用于构建和管理用户界面。
+MVC模式：项目遵循模型-视图-控制器设计模式，以分离关注点并提高代码的可维护性。
+自动布局 (Auto Layout)：用于设计响应式用户界面，以适应不同的iPhone设备。
 
-在 `RefuseOfferViewController` 中：
-- 显示包含多行文本的标签。
-- 显示公司 logo 图片。
-- 使用 Auto Layout 进行布局。
-
-在 `AcceptOfferViewController` 中：
-- 允许用户填写入职资料，包括基本信息、地址信息、紧急联系人、教育背景和工作经验。
-- 提供文件上传功能，包括个人照片、身份证和简历。
-- 支持表单提交，并进行简单的表单验证。
-
-## 技术栈
-
-- 语言：Objective-C
-- 框架：UIKit
-- 集成开发环境：Xcode
-- 版本控制：Git
